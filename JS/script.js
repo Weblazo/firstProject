@@ -20,19 +20,12 @@
 
 // console.log(personalMovieDB);
 
-const num = 50;
+const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
 
-switch (num) {
-    case 49:
-        console.log('Неверно');
-        break;
-    case 100:
-        console.log('Неверно');
-        break;
-    case 5:
-        console.log('В точку!');
-        break;
-    default:
-        console.log('Не в этот раз');
-        break;
+
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+   console.log('Done!')
 }
