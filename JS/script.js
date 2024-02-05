@@ -20,12 +20,10 @@
 
 // console.log(personalMovieDB);
 
-const hamburger = 3;
-const fries = 3;
-const cola = 0;
-const nuggets = 2;
 
-
-if (hamburger === 3 && cola || fries === 3 && nuggets) {
-   console.log('Done!')
+for (let i = 1; i < 10; i++) {
+   if (i === 6) {
+      continue;
+   }
+   console.log(i);
 }
