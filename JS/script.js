@@ -29,14 +29,61 @@
 // *****
 // ******
 
-let result = '';
-const length = 7;
+// let result = '';
+// const length = 7;
 
-for (let i = 1; i < length; i++) {
-   for (let j=0; j<i; j++) {
-      result += '*';
-   };
-   result += '\n';
+// for (let i = 1; i < length; i++) {
+//    for (let j=0; j<i; j++) {
+//       result += '*';
+//    };
+//    result += '\n';
+// };
+
+// console.log(result);
+
+// ***************************
+
+// Задача №1
+let num = 5;
+
+while (num < 11) {
+   console.log(num);
+   num++;
 };
 
-console.log(result);
+// Задача №2
+
+let numTwo = 20;
+
+for (let i = 1; i < 12; i++) {
+   if (numTwo === 12) {
+      break;
+   };
+   console.log(numTwo);
+   numTwo--;
+};
+
+// Задача №3
+
+for (let i = 1; i < 11; i++) {
+   if (i % 2 != 0) {
+      continue;
+   };
+   console.log(i);
+};
+
+// Задача №4
+
+for (let i = 2; i <= 16; i++) {
+       if (i % 2 === 0) {
+           continue;
+       } else {
+           console.log(i);
+       }
+   }
+
+let numFour = 16;
+
+while (numFour < 16) {
+   
+}
