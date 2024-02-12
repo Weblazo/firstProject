@@ -43,47 +43,37 @@
 
 // ***************************
 
-// Задача №1
-let num = 5;
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", " ");
 
-while (num < 11) {
-   console.log(num);
-   num++;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-// Задача №2
-
-let numTwo = 20;
-
-for (let i = 1; i < 12; i++) {
-   if (numTwo === 12) {
-      break;
-   };
-   console.log(numTwo);
-   numTwo--;
-};
-
-// Задача №3
-
-for (let i = 1; i < 11; i++) {
-   if (i % 2 != 0) {
-      continue;
-   };
-   console.log(i);
-};
-
-// Задача №4
-
-for (let i = 2; i <= 16; i++) {
-       if (i % 2 === 0) {
-           continue;
-       } else {
-           console.log(i);
-       }
-   }
-
-let numFour = 16;
-
-while (numFour < 16) {
-   
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Один из последних просмотренных фильмов?", " "),
+          b = prompt("На сколько оцените его?", "");
+    
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        console.log('Done');
+        personalMovieDB.movies[a] = b;
+    } else {
+        console.log('Error');
+        i--;
+    }
+    
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено довольно мало фильмов");
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log("Вы классический зритель");
+    } else if (personalMovieDB.count >= 30) {
+        console.log("Вы киноман");
+    } else {
+        console.log("произошла ошибка");
+    }
 }
+
+console.log(personalMovieDB);
