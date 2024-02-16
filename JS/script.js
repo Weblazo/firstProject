@@ -43,37 +43,71 @@
 
 // ***************************
 
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", " ");
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", " ");
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов?", " "),
-          b = prompt("На сколько оцените его?", "");
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt("Один из последних просмотренных фильмов?", " "),
+//           b = prompt("На сколько оцените его?", "");
     
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        console.log('Done');
-        personalMovieDB.movies[a] = b;
-    } else {
-        console.log('Error');
-        i--;
-    }
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         console.log('Done');
+//         personalMovieDB.movies[a] = b;
+//     } else {
+//         console.log('Error');
+//         i--;
+//     }
     
-    if (personalMovieDB.count < 10) {
-        console.log("Просмотрено довольно мало фильмов");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log("Вы классический зритель");
-    } else if (personalMovieDB.count >= 30) {
-        console.log("Вы киноман");
-    } else {
-        console.log("произошла ошибка");
-    }
+//     if (personalMovieDB.count < 10) {
+//         console.log("Просмотрено довольно мало фильмов");
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//         console.log("Вы классический зритель");
+//     } else if (personalMovieDB.count >= 30) {
+//         console.log("Вы киноман");
+//     } else {
+//         console.log("произошла ошибка");
+//     }
+// }
+
+// console.log(personalMovieDB);
+
+function showFirstMessage(text) {
+    console.log(text);
 }
 
-console.log(personalMovieDB);
+showFirstMessage("Hello World!");
+
+function calc(a, b) {
+    return(a * b);
+}
+
+console.log(calc(5, 4));
+console.log(calc(87, 5666556));
+console.log(calc(7, 5));
+
+const logger = function() {
+    console.log("Hello");
+};
+
+const calc = (a, b) => a + b;
+
+// *****
+
+let usdCurr = 38;
+let eurCurr = 41.6;
+
+function convert(amount, curr) {
+    console.log(curr * amount);
+}
+
+convert(500, eurCurr);
+convert(500, usdCurr);
+
+// *****
