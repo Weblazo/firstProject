@@ -111,3 +111,52 @@ convert(500, eurCurr);
 convert(500, usdCurr);
 
 // *****
+
+let usdtCurr = 44;
+let discount = 0.8;
+
+function calculate(amnt, usdtCurr) {
+    return amnt * usdtCurr;
+}
+
+function promotion(result) {
+    console.log(result * discount);
+}
+
+promotion(calculate(1000, usdtCurr));
+
+//****
+
+function sayHello(name) {
+    return `Hello, ${name}`;
+}
+
+console.log(sayHello('Benya'))
+
+
+function returnNeighboringNumbers(num) {
+    return [num -1, num, num +1];
+}
+
+console.log(returnNeighboringNumbers(4))
+
+
+function getMathResult(num, times) {
+    if (typeof(times) !== 'number' || times <= 0) {
+        return num;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+        } else {
+            str += `${num * i}---`;
+        }
+    }
+
+    return str;
+}
+
+console.log(getMathResult(3, 5))
